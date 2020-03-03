@@ -1,0 +1,18 @@
+.scroll {
+    /* (EXPERIMENTAL) Firefox - https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-width */
+    scrollbar-width: none;
+    /* (NON-STANDARD) MS IE/Edge - https://developer.mozilla.org/en-US/docs/Web/CSS/-ms-overflow-style */
+    -ms-overflow-style: none;
+    /* (NON-STANDARD) Safari Mobil - https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-overflow-scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* (NON-STANDARD) Safari Mobil - https://webkit.org/demos/scroll-snap/ */
+    -webkit-scroll-snap-type: mandatory;
+    -webkit-scroll-snap-points-x: repeat(100%);
+  }
+  
+  /* Scrollbar */
+  .scroll::-webkit-scrollbar,
+  .scroll::-webkit-scrollbar-track {
+    display: none;
+  }
+  
