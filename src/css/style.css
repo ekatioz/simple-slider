@@ -1,11 +1,16 @@
 @import "./reset.css";
 @import "./scroll.css";
+@import "./controls.css";
+
+karten-carousel{
+    margin-top: 5%;
+    display: block;
+    position: relative;
+}
 
 .carousel {
-    margin-top: 5vh;
     display: flex;
     overflow-x: scroll;
-    scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     padding: 0 5px 30px 5px;
 }
@@ -16,8 +21,8 @@
 
 .item {
     margin: 0 5px;
-    display: inline-block;
     cursor: pointer;
+    position: relative;
 }
 
 .carousel img{
@@ -29,8 +34,4 @@
     transform: scale(1.1);
     filter: grayscale(0) brightness(1);
     margin: 0 20px;
-}
-
-.auswahl{
-
 }
