@@ -3,16 +3,28 @@
 @import "./controls.css";
 
 karten-carousel{
-    margin-top: 5%;
     display: block;
     position: relative;
+    outline: none;
+    --item-margin: 5px;
+    --padding-bottom: 60px;
+    background-image: linear-gradient(#eee calc(100% - (var(--padding-bottom) - 24px)), transparent calc(100% - (var(--padding-bottom) - 25px)));
+}
+
+.headline{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: inline-block;
+    width: 100%;
 }
 
 .carousel {
     display: flex;
     overflow-x: scroll;
     scroll-behavior: smooth;
-    padding: 0 5px 30px 5px;
+    padding: 0 0 var(--padding-bottom);
 }
 
 .carousel input[type="radio"]{
@@ -20,18 +32,20 @@ karten-carousel{
 }
 
 .item {
-    margin: 0 5px;
+    margin: 0 var(--item-margin);
     cursor: pointer;
     position: relative;
 }
 
 .carousel img{
-    transition: all 200ms ease-in-out;
+    transition: all 100ms ease-in-out;
     filter: grayscale(1) brightness(0.7);
 }
 
 .carousel input[type="radio"]:checked~img{
-    transform: scale(1.1);
+    transform: scale(1.16);
+    transform-origin: center top;
     filter: grayscale(0) brightness(1);
-    margin: 0 20px;
+    margin: 0 calc(3.5 * var(--item-margin));
+    box-shadow: 0 6px 11px 0 rgba(0, 0, 0, 0.17);
 }
